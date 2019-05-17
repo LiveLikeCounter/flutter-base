@@ -33,27 +33,28 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        routes: <String, WidgetBuilder>{
-          '/login': (BuildContext context) => LoginScreen(),
-          '/home': (BuildContext context) => HomeScreen(),
-        },
-        initialRoute: '/',
-        onGenerateRoute: (RouteSettings settings) {
-          switch (settings.name) {
-            case '/':
-              return MaterialPageRoute(builder: (_) {
-                return _isAuthenticated ? HomeScreen() : LoginScreen();
-              });
-            case '/login':
-              return MaterialPageRoute(builder: (_) => LoginScreen());
-            case '/home':
-              return MaterialPageRoute(builder: (_) => HomeScreen());
-          }
-        },
-        onUnknownRoute: (RouteSettings settings) {
-          return MaterialPageRoute(
-              builder: (BuildContext context) => HomeScreen());
-        },
+      debugShowCheckedModeBanner: false,
+      routes: <String, WidgetBuilder>{
+        '/login': (BuildContext context) => LoginScreen(),
+        '/home': (BuildContext context) => HomeScreen(),
+      },
+      initialRoute: '/',
+      onGenerateRoute: (RouteSettings settings) {
+        switch (settings.name) {
+          case '/':
+            return MaterialPageRoute(builder: (_) {
+              return _isAuthenticated ? HomeScreen() : LoginScreen();
+            });
+          case '/login':
+            return MaterialPageRoute(builder: (_) => LoginScreen());
+          case '/home':
+            return MaterialPageRoute(builder: (_) => HomeScreen());
+        }
+      },
+      onUnknownRoute: (RouteSettings settings) {
+        return MaterialPageRoute(
+            builder: (BuildContext context) => HomeScreen());
+      },
     );
   }
 }
