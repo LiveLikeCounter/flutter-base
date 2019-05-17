@@ -89,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   margin: EdgeInsets.all(30),
                   width: MediaQuery.of(context).size.width / 3,
                   height: 200,
-                  child: Image.asset('assets/images/Fireship.jpeg'),
+                  child: Image.asset('assets/images/Interestinate.png'),
                 ),
                 SignInButtonBuilder(
                   text: 'Sign in with Email',

@@ -1,4 +1,4 @@
-package com.example.flutterbase;
+package com.example.flutterfirebaseauth;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
